@@ -1,29 +1,42 @@
 {
-  "name": "botzap",
+  "name": "tio-patinhas",
   "version": "1.0.0",
-  "description": "personal financial agent on WhatsApp",
+  "description": "Agente financeiro pessoal no WhatsApp: anota gastos e gera resumos por categoria",
+  "type": "module",
   "main": "index.js",
+  "engines": {
+    "node": ">=22.5"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "chat": "node scripts/chat.js",
+    "demo": "node scripts/demo.js",
+    "dev": "node --watch index.js",
+    "test": "node --test test/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MiguelRichena/tio-patinhas.git"
   },
+  "keywords": [
+    "whatsapp",
+    "financas",
+    "bot",
+    "sqlite",
+    "nodejs"
+  ],
   "author": "Miguel Richena",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MiguelRichena/tio-patinhas/issues"
   },
   "homepage": "https://github.com/MiguelRichena/tio-patinhas#readme",
   "dependencies": {
-    "@supabase/supabase-js": "^2.76.1",
     "dotenv": "^17.2.3",
     "express": "^5.1.0"
   },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
+  "optionalDependencies": {
+    "baileys": "^7.0.0-rc14",
+    "qrcode-terminal": "^0.12.0"
   }
 }

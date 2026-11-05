@@ -1,6 +1,8 @@
 node_modules/
 .env
 .env.local
+data/
 dist/
 .DS_Store
 npm-debug.log*
+demo-output.txt
